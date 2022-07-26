@@ -19,7 +19,8 @@ node {
          script {
                  sh 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/e9r2c8q1'
                 //sh 'aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 655895384845.dkr.ecr.us-east-2.amazonaws.com'
-                sh 'docker push 655895384845.dkr.ecr.us-east-2.amazonaws.com/docker-private-repo:'+env.BUILD_NUMBER
+                sh  'docker push public.ecr.aws/e9r2c8q1/docker-repo:'+env.BUILD_NUMBER
+               // sh 'docker push 655895384845.dkr.ecr.us-east-2.amazonaws.com/docker-private-repo:'+env.BUILD_NUMBER
          }
         
       }
