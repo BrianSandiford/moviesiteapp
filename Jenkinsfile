@@ -42,7 +42,7 @@ node {
              sh "./changeTag.sh $BUILD_NUMBER"
              sh "git add ."
              sh " git commit -am '[Jenkins CI] Updated image tag $BUILD_NUMBER.' "
-             sh "git remote set-url origin git@github.com:BrianSandiford/moviesiteapp.git"
+             sh "git remote set-url origin git@github.com:BrianSandiford/moviesiteapp-helmcharts.git"
              sh " git remote show origin"
              sh "git push -u origin master"
             
