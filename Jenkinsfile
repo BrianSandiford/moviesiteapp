@@ -32,7 +32,7 @@ node {
          
             sh('''
                 rm -R -f moviesiteapp-helmcharts
-                git clone https://github.com/BrianSandiford/moviesiteapp-helmcharts.gi
+                git clone https://github.com/BrianSandiford/moviesiteapp-helmcharts.git
                 ''')
                 // git clone https://$USERPASS@github.com/BrianSandiford/moviesiteapp-helmcharts.git came from sh  () above
                 }
