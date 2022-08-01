@@ -44,8 +44,12 @@ node {
              sh " git commit -am '[Jenkins CI] Updated image tag $BUILD_NUMBER.' "
              sh "git remote set-url origin git@github.com:BrianSandiford/moviesiteapp-helmcharts.git"
              sshagent(['d3633d00-8a44-460a-b45c-6d767b1b3621']) {
-              sh " git remote show origin"
-              sh "git push -u origin master"
+              sh "git checkout master"
+              sh "git fetch"
+              sh "git rebase origin/master"
+              sh "git push origin master:master"
+              // sh " git remote show origin"
+              // sh "git push -u origin master"
              }
             
             
